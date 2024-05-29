@@ -15,20 +15,20 @@ pipeline {
 						stage('Stage 2 - Compile Code') {
 							steps {
 								//cmd to compile the code							
-                                bat "mvn compile"
-                                //sh "mvn compile"
+                                // bat "mvn compile"
+                                sh "mvn compile"
 							}
 						}
 						stage('Stage 3 - Run Unit Tests') {
 							steps {
 								//cmd to run tests							
-                                bat "mvn test"
+                                sh "mvn test"
 							}
 						}
 						stage('Stage 4 -Create build') {
 							steps {
 								//cmd to create the build of project							
-                                bat "mvn testpackage"
+                                sh "mvn testpackage"
 							}
 						}
 	
